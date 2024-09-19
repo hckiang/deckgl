@@ -87,10 +87,8 @@ export default function(widgetElement, width, height) {
   }
 
   if (HTMLWidgets.shinyMode) {
-    Shiny.addCustomMessageHandler('proxythis', function(obj) {
-      // console.log(obj);
+      Shiny.addCustomMessageHandler('proxythis--'+widgetElement.id, function(obj) {
       const widgetData = obj.x;
-      console.log(widgetData);
       /*
       fixLayerProperties(widgetData.layers);
       console.log(widgetData);

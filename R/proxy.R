@@ -43,7 +43,7 @@ update_deckgl <- function(proxy, ...) {
   }
 
   proxy$session$sendCustomMessage(
-    type = "proxythis",
+    type = paste0("proxythis--",proxy$id),
     message = list(
       id = proxy$id,
       test = list(hi = "I am your proxy", ...),
